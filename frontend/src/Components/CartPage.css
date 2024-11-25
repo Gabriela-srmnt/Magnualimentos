@@ -1,0 +1,135 @@
+/* Estilos para la página de carrito */
+.cart-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f9fa; /* Fondo más claro */
+  flex-wrap: wrap;
+}
+
+.cart-items {
+  width: 65%; /* Ajustamos el ancho para los productos */
+  margin-right: 20px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+}
+
+.cart-table th {
+  background-color: #28a745;
+  color: white;
+}
+
+.cart-table td {
+  background-color: white;
+}
+
+.cart-table td img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.cart-summary {
+  width: 30%; /* Ajustamos el ancho para el resumen */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cart-summary .total {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.cart-summary button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cart-summary button:hover {
+  background-color: #218838;
+}
+
+/* Estilo de botones "+" y "-" */
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.quantity-controls button:hover {
+  background-color: #ddd;
+}
+
+/* Estilo de la parte vacía del carrito */
+.empty-cart {
+  text-align: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.empty-cart p {
+  font-size: 18px;
+  color: #333;
+}
+
+.empty-cart button {
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.empty-cart button:hover {
+  background-color: #218838;
+}
+
+/* Estilo de las acciones de eliminar productos */
+.cart-item-actions button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.cart-item-actions button:hover {
+  background-color: #cc0000;
+}

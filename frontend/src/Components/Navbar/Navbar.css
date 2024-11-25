@@ -1,118 +1,198 @@
 /* Estilos generales para la barra de navegación */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 100px; /* Ajusta el tamaño del logo */
-    height: auto;
-    margin-right: 10px;
-  }
-  
-  .search-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .search-bar {
-    width: 80%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .nav-links {
-    margin-right: 20px;
-  }
-  
-  .nav-links ul {
-    display: flex;
-    list-style-type: none;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #28a745;
-    font-size: 14px;
-  }
-  
-  .nav-links a:hover {
-    color: #218838;
-  }
-  
-  .cart-container img {
-    width: 24px;
-    height: 24px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Mantiene el navbar visible */
+}
 
-  .cart-container {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .cart-container a {
-    text-decoration: none;
-  }
-  
-  .cart-container svg {
-    font-size: 30px; /* Ajusta el tamaño del icono */
-    color: #28a745;   /* Ajusta el color del icono */
-  }
-  
-  .cart-container {
-    display: flex;
-    align-items: center;
-    position: relative; /* Necesario para el "badge" */
-  }
-  
-  .cart-container a {
-    text-decoration: none;
-  }
-  
-  .cart-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    padding: 5px;
-    font-size: 14px;
-    font-weight: bold;
-  }
+.logo-container {
+  display: flex;
+  align-items: center;
+}
 
-  .App {
-    font-family: Arial, sans-serif;
-  }
-  
-  .home-page {
-    background-color: white; /* Fundo branco */
-    text-align: center;
-    padding: 50px;
-  }
-  
-  .navbar {
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilos adicionais para o resto da página */
-  
-  
+.logo {
+  width: 100px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-right: 10px;
+}
+
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.nav-links {
+  margin-right: 20px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #28a745;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #218838;
+}
+
+/* Estilos del carrito */
+.cart-container {
+  display: flex;
+  align-items: center;
+  position: relative; /* Necesario para el "badge" */
+}
+
+.cart-container a {
+  text-decoration: none;
+}
+
+.cart-container svg {
+  font-size: 30px;
+  color: #28a745;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Formulario de login */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  position: absolute;
+  top: 20%;  /* Ajuste para que no esté demasiado arriba */
+  left: 50%;
+  transform: translateX(-50%); /* Centrado horizontal */
+  width: 320px; /* Un poco más ancho */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Lo pone encima del Navbar */
+  background: #f9f9f9;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-form label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-form input {
+  padding: 12px;
+  margin-bottom: 20px;  /* Aumentamos el espacio entre inputs */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  background-color: #e7f9e7;
+  box-sizing: border-box;
+}
+
+.login-form button {
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #218838;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  color: #333;
+}
+
+.remember-me input {
+  margin-right: 10px;
+}
+
+/* Estilos adicionales */
+.user-info {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cart-count {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #28a745;
+}
+
+/* Estilos para la página principal */
+.home-page {
+  background-color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo para a contagem de itens no carrinho */
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+

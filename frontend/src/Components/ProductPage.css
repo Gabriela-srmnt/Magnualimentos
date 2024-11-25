@@ -1,36 +1,114 @@
-.logo {
-    width: 150px; /* Ajusta el tamaño del logo */
-    height: auto;
-    margin-right: 20px; /* Espacio al lado del logo */
-  }
-  
-  .product-card .product-image, .cart-item .cart-item-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px; /* Ajusta la altura */
-  }
-  
-  .product-card svg, .cart-item svg {
-    font-size: 50px; /* Ajusta el tamaño del icono */
-    color: #28a745; /* Ajusta el color */
-  }
-  
-  .App {
-    font-family: Arial, sans-serif;
-  }
-  
-  .home-page {
-    background-color: white; /* Fundo branco */
-    text-align: center;
-    padding: 50px;
-  }
-  
-  .navbar {
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilos adicionais para o resto da página */
-  
+/* Estilos gerais da página de produtos */
+.product-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Título da página de produtos */
+.product-page-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+/* Grid para exibir os produtos */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Define um grid responsivo */
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Ajustes nos cards de produtos */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* Ajuste para melhor exibição da imagem */
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.product-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.product-card button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.product-card button:hover {
+  background-color: #218838;
+}
+
+/* Estilo dos botões de adicionar/remover produtos */
+.product-card button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-right: 10px; /* Adicionando um espaço à direita */
+}
+
+.product-card .quantity-buttons {
+  display: flex;
+  justify-content: space-between; /* Espacamento entre os botões */
+  width: 100%; /* Faz os botões ocuparem o máximo de espaço disponível */
+}
+
+.product-card .quantity-button {
+  padding: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px; /* Espaço entre os botões de "+" e "-" */
+}
+
+.product-card .quantity-button:hover {
+  background-color: #ddd;
+}

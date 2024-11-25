@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
 import ProductCard from './ProductCard';
 import './ProductPage.css';
-import Navbar from "./Navbar/Navbar";
 
-const ProductPage = () => {
-  const [cart, setCart] = useState([]);  // Estado do carrinho
-
-  const handleAddToCart = (product) => {
-    setCart([...cart, product]);
-  };
-
-  const handleRemoveFromCart = (product) => {
-    setCart(cart.filter(item => item !== product));
-  };
-
+const ProductPage = ({ cart, onAddToCart, onRemoveFromCart }) => {
+  
   const products = [
     { id: 1, name: 'Jengibre (kilo)', price: 1900, currency: 'CRC', image: '', quantity: 0 },
     { id: 2, name: 'Plátano (un)', price: 150, currency: 'CRC', image: '', quantity: 0 },
@@ -35,28 +25,20 @@ const ProductPage = () => {
     { id: 18, name: 'Tora de Falafel', price: 3500, currency: 'CRC', image: '', quantity: 0 },
     { id: 19, name: 'Fortmag', price: 200, currency: 'USD', image: '', quantity: 0 },
     { id: 20, name: 'Masa para chorreada 1kg', price: 2500, currency: 'CRC', image: '', quantity: 0 },
-
-    // Agrega más productos aquí
   ];
 
   return (
-    <div className="NavBar">
-      {/* Passando o cart como prop para o Navbar */}
-      <Navbar cart={cart} />
-      <header>
-        {/* Resto do código */}
-      </header>
-      
+    <div className="product-page">
+      <h2>Productos Disponibles</h2>
       <div className="products-grid">
-        {products.map(product => (
+        {products.map((product) => (
           <ProductCard
             key={product.id}
             name={product.name}
             price={product.price}
             currency={product.currency}
-            image={product.image}
-            onAdd={() => handleAddToCart(product)}  // Passando função de adicionar ao carrinho
-            onRemove={() => handleRemoveFromCart(product)}  // Passando função de remover do carrinho
+            onAdd={() => onAddToCart(product)}  // Pasando la función de agregar al carrito
+            onRemove={() => onRemoveFromCart(product)}  // Pasando la función de quitar del carrito
           />
         ))}
       </div>
