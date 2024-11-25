@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar/Navbar'; // Importe a barra de navegação
+import './App.css';
+import HomePage from './Components/HomePage'; // Sua página inicial
+import ProductPage from './Components/ProductPage'; // Outra página, exemplo de produto
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <div className="App">
+        {/* Barra de navegação que será mostrada em todas as páginas */}
+        <Navbar />
 
-export default App
+        {/* Define o conteúdo das rotas */}
+        <Routes>
+          <Route path="/" element={<HomePage />} /> {/* Página inicial */}
+          <Route path="/product" element={<ProductPage />} /> {/* Página de produto */}
+
+          {/* Adicione outras rotas conforme necessário */}
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+
+export default App;

@@ -1,0 +1,118 @@
+/* Estilos generales para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 100px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .nav-links {
+    margin-right: 20px;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #28a745;
+    font-size: 14px;
+  }
+  
+  .nav-links a:hover {
+    color: #218838;
+  }
+  
+  .cart-container img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cart-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .cart-container a {
+    text-decoration: none;
+  }
+  
+  .cart-container svg {
+    font-size: 30px; /* Ajusta el tamaño del icono */
+    color: #28a745;   /* Ajusta el color del icono */
+  }
+  
+  .cart-container {
+    display: flex;
+    align-items: center;
+    position: relative; /* Necesario para el "badge" */
+  }
+  
+  .cart-container a {
+    text-decoration: none;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .App {
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-page {
+    background-color: white; /* Fundo branco */
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .navbar {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos adicionais para o resto da página */
+  
+  

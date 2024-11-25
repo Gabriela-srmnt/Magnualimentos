@@ -1,0 +1,36 @@
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 20px; /* Espacio al lado del logo */
+  }
+  
+  .product-card .product-image, .cart-item .cart-item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; /* Ajusta la altura */
+  }
+  
+  .product-card svg, .cart-item svg {
+    font-size: 50px; /* Ajusta el tamaño del icono */
+    color: #28a745; /* Ajusta el color */
+  }
+  
+  .App {
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-page {
+    background-color: white; /* Fundo branco */
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .navbar {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos adicionais para o resto da página */
+  

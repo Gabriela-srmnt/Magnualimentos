@@ -1,42 +1,78 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.App {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
   text-align: center;
 }
 
+.product-info {
+  margin-top: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  width: 150px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-right: 20px; /* Espacio al lado del logo */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-card .product-image, .cart-item .cart-item-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Ajusta la altura */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.product-card svg, .cart-item svg {
+  font-size: 50px; /* Ajusta el tamaño del icono */
+  color: #28a745; /* Ajusta el color */
 }
 
-.card {
-  padding: 2em;
+.App {
+  font-family: Arial, sans-serif;
 }
 
-.read-the-docs {
-  color: #888;
+.home-page {
+  background-color: white; /* Fundo branco */
+  text-align: center;
+  padding: 50px;
 }
+
+.navbar {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos adicionais para o resto da página */
